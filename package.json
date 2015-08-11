@@ -17,11 +17,9 @@
   },
   "homepage": "https://github.com/thebomb111/todo#readme",
   "dependencies": {
-    "angular": "^1.4.3",
     "bower": "^1.4.1"
   },
   "devDependencies": {
-    "angular": "^1.4.3",
     "bower": "^1.4.1"
   }
 }
