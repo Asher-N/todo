@@ -1,0 +1,27 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "todo task list app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thebomb111/todo.git"
+  },
+  "author": "asher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebomb111/todo/issues"
+  },
+  "homepage": "https://github.com/thebomb111/todo#readme",
+  "dependencies": {
+    "angular": "^1.4.3",
+    "bower": "^1.4.1"
+  },
+  "devDependencies": {
+    "angular": "^1.4.3",
+    "bower": "^1.4.1"
+  }
+}
