@@ -1,13 +1,10 @@
 'use strict';
 
-
 var todoApp = angular.module('todo', [
-  'ngRoute',
-  'todoControllers',
-  'todoFilters'
+  'todoListCtrl' , 'ngRoute'
 ]);
 
- 
+ /*
 todoApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
@@ -15,14 +12,12 @@ todoApp.config(['$routeProvider',
         templateUrl: 'partials/todo-list.html',
         controller: 'todoListCtrl'
       }).
-      when('/note/:noteId', {
-        templateUrl: 'partials/note-detail.html',
-        controller: 'NoteDetailCtrl'
-      }).
       otherwise({
         redirectTo: '/notes'
       });
   }]);
+
+*/
 
 
 

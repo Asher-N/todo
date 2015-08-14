@@ -1,20 +1,66 @@
 <!doctype html>
-<html lang="en" ng-app="todoApp">
+<html lang="en" ng-app="todo">
 <head>
   <meta charset="utf-8">
-  <title>ToDo List Mangement</title>
+  <title>todos</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
 
-
 </head>
 <body>
-
+<form>
   <div ng-view></div>
+
+  <div ng-controller="todoListCtrl" class="todos center">
+
+    <div ng-include="template.home"></div>
+
+<!-- why below is not working -->
+<ng-include src="asher.html" >
+... included
+</ng-include>
+
+
+ 
+  	<h1>todos</h1>
+    <div class="todo center">
+
+
+      <ul>
+
+        <li
+          <span class="notes">
+
+
+            <input type="checkbox" ng-click="toggle()" ng-model="newcompleted" />
+
+            <input type="text" ng-model="newtext" ng-KeyPress="checkEnter($event);"/> 
+
+
+         </span>
+        </li>
+
+        <li ng-model="notes"  ng-repeat="note in notes | filter : showNote(note.text, note.status)">
+          <div class="notes">
+              <input type="checkbox" ng-click="toggle()" ng-model="note.completed" />
+              <input type="text" ng-model="note.text"/> 
+          </div>
+        </li>
+
+      </ul>
+    <div class="menu" ng-model"statusCount">{{statusCount}} items left
+      <a ng-href="#/" class="btn" ng-model="status" ng-click="setStatus('All');"  ng-class="{selected: status == 'All'} ">All</a>
+      <a ng-href="#/" class="btn" ng-model="status" ng-click="setStatus('Active');" ng-class="{selected: status == ''} ">Active</a>
+      <a ng-href="#/" class="btn" ng-model="status" ng-click="setStatus('Completed');" ng-class="{selected: status == ''} ">Completed</a>
+      <a ng-href="#/" class="btn" ng-model="status" ng-click="setStatus('Clear');">Clear</a>
+    </div>
+  </div>
+</div>
+</form>
   <script src="bower_components/angular/angular.js"></script>
- <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
+  <!--<script src="js/filters.js"></script>-->
 </body>
 </html>

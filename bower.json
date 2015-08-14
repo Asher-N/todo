@@ -1,0 +1,22 @@
+{
+  "name": "todo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/thebomb111/todo",
+  "authors": [
+    "Asher <infohearts@yahoo.com>"
+  ],
+  "description": "todo app",
+  "main": "index.html",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
